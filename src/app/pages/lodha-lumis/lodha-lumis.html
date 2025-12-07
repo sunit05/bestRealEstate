@@ -1,0 +1,121 @@
+<!-- HERO SLIDER -->
+
+
+<!-- PROJECT HIGHLIGHTS -->
+<section class="projects">
+  <h2>Featured Lodha Lumis Project</h2>
+  <p class="intro-text">
+    Discover a collection of exquisite residences at Lodha Lumis, each designed to harmonize luxury, comfort, and modern living. Explore our apartments, penthouses, and villas with breathtaking interiors and world-class amenities.
+  </p>
+  <!-- FEATURED CARDS -->
+<!-- <div class="hero-cards">
+  <div class="card" *ngFor="let slide of slides">
+    <img [src]="slide.image" alt="{{slide.title}}">
+    <div class="card-content">
+      <h3>{{slide.title}}</h3>
+      <p>{{slide.subtitle}}</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="slideshow-container">
+  <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
+    <img [src]="slide.image" alt="{{slide.title}}">
+    <div class="card-content">
+      <h3>Lodha Lumis</h3>
+      <!-- <h3>{{slide.title}}</h3> -->
+      <!-- <p>{{slide.subtitle}}</p> -->
+    </div>
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="prev" (click)="prevSlide()">&#10094;</a>
+  <a class="next" (click)="nextSlide()">&#10095;</a>
+</div>
+
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <!-- <img [src]="project.image" alt="{{project.name}}"> -->
+      <div class="project-info">
+        <h3>{{project.name}}</h3>
+        <p><strong>Location:</strong> {{project.location}}</p>
+        <p><strong>Price:</strong> ₹ {{project.price | number}}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris et ligula suscipit sagittis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<!-- <section class="amenities">
+  <h2>World-Class Amenities</h2>
+  <p class="intro-text">
+    Lodha Lumis offers state-of-the-art amenities to ensure a holistic lifestyle. From wellness to recreation, every facility is thoughtfully curated.
+  </p>
+  <div class="amenities-grid">
+    <div class="amenity" *ngFor="let amenity of amenities">
+      <img [src]="amenity.icon" alt="{{amenity.name}}">
+      <h4>{{amenity.name}}</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel sapien sed sem bibendum efficitur.</p>
+    </div>
+  </div>
+</section> -->
+
+<section class="amenities">
+  <h2>World-Class Amenities</h2>
+  <p class="intro-text">
+    Lodha Lumis offers state-of-the-art amenities to ensure a holistic lifestyle. From wellness to recreation, every facility is thoughtfully curated.
+  </p>
+
+ <!-- <div class="amenities-vertical">
+  <div class="amenity-card" *ngFor="let amenity of amenities">
+    <img class="amenity-img" [src]="amenity.icon" alt="{{amenity.name}}">
+  </div>
+</div> -->
+
+<div class="amenities-vertical">
+  <div class="amenity-card" *ngFor="let amenity of amenities">
+    <div class="zoom-container" #zoomArea>
+      <img class="amenity-img"
+           [src]="amenity.icon"
+           alt="{{amenity.name}}"
+           (mousemove)="onMouseMove($event)">
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+
+
+<!-- NEARBY ATTRACTIONS -->
+<section class="nearby">
+  <h2>Nearby Attractions</h2>
+  <p class="intro-text">
+    Experience convenience with premium schools, shopping centers, and parks just minutes away from your home.
+  </p>
+  <ul>
+    <li>High-end Shopping Mall - 5 mins</li>
+    <li>International School - 3 mins</li>
+    <li>Central Park & Jogging Tracks - 2 mins</li>
+    <li>Metro & Transportation Hub - 7 mins</li>
+  </ul>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>Client Testimonials</h2>
+  <div class="testimonial" *ngFor="let client of clients">
+    <p>"{{client.feedback}}"</p>
+    <h4>- {{client.name}}</h4>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <h2>{{cta.title}}</h2>
+  <p>{{cta.subtitle}}</p>
+  <a [routerLink]="cta.buttonLink" class="btn">{{cta.buttonText}}</a>
+</section>

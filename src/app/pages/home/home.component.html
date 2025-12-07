@@ -1,0 +1,98 @@
+<!-- <div class="slideshow-container">
+  <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
+    <img [src]="slide.image" alt="Project Slide">
+
+    <div class="text-overlay" [class.animate]="i === currentSlide">
+      <h2>{{ slide.title }}</h2>
+      <p>{{ slide.subtitle }}</p>
+    </div>
+  </div>
+
+  <a class="prev" (click)="prevSlide()">&#10094;</a>
+  <a class="next" (click)="nextSlide()">&#10095;</a>
+</div> -->
+
+<div class="slideshow-container">
+  <div 
+    class="slide" 
+    *ngFor="let slide of slides; let i = index" 
+    [class.active]="i === currentSlide"
+    (click)="navigateTo(slide.route)" 
+    style="cursor: pointer;"
+  >
+    <img [src]="slide.image" alt="Project Slide">
+
+    <div class="text-overlay" [class.animate]="i === currentSlide">
+      <h2>{{ slide.title }}</h2>
+      <!-- <p>{{ slide.subtitle }}</p> -->
+    </div>
+  </div>
+
+  <a class="prev" (click)="prevSlide()">&#10094;</a>
+  <a class="next" (click)="nextSlide()">&#10095;</a>
+</div>
+
+
+<!-- Feature Bar Section -->
+<div class="feature-bar">
+  <div class="feature">
+    <h3>Since 1996</h3>
+    <p>Building Trust & Quality</p>
+  </div>
+  <div class="feature">
+    <h3>200+ Projects</h3>
+    <p>Across Prime Locations</p>
+  </div>
+  <div class="feature">
+    <h3>1000+ Families</h3>
+    <p>Happy & Satisfied</p>
+  </div>
+</div>
+
+
+<!-- =========================================================================== -->
+
+<section class="featured-projects">
+  <h2>Featured Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of featuredProjects">
+      <img [src]="project.image" alt="{{ project.name }}" />
+      <div class="project-info">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.location }}</p>
+        <!-- <p>₹{{ project.price | number }}</p> -->
+        <!-- <a href="#" class="btn">View Details</a> -->
+         <!-- <a [routerLink]="project.route" class="btn">View Details</a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="amenities-section">
+  <h2>Amenities & Facilities</h2>
+  <div class="amenities-grid">
+    <div class="amenity" *ngFor="let amenity of amenities">
+      <img [src]="amenity.icon" alt="{{ amenity.name }}" />
+      <p>{{ amenity.name }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonials-carousel">
+    <div class="testimonial" *ngFor="let client of clients">
+      <p>"{{ client.feedback }}"</p>
+      <h4>{{ client.name }}</h4>
+      <span>{{ client.project }}</span>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <h2>Schedule a Visit Today</h2>
+  <p>Let us help you find your dream home!</p>
+  <a href="#" class="btn-primary">Book a Visit</a>
+</section>
+
+
+

@@ -1,0 +1,150 @@
+<header class="nav-header">
+  <div class="nav-logo">
+  <a routerLink="/" routerLinkActive="active">
+    <img src="images/log.png" alt="BestRealEstate Logo" />
+  </a>
+</div>
+
+<!-- SEARCH BAR -->
+<div class="nav-search">
+  <input 
+    type="text" 
+    placeholder="Search properties..."
+    [(ngModel)]="searchQuery"
+    (input)="onSearchChange()"
+  />
+
+  <!-- SUGGESTIONS LIST -->
+  <ul class="search-suggestions" *ngIf="filteredResults.length > 0">
+    <li 
+      *ngFor="let item of filteredResults" 
+      (click)="navigateTo(item.route)"
+    >
+      {{ item.label }}
+    </li>
+  </ul>
+</div>
+
+
+
+  <!-- NAV MENU -->
+  <nav class="nav-menu" [ngClass]="{ 'active': isMenuOpen }">
+    <ul>
+      <!-- RESALE HOMES -->
+      <li 
+        class="dropdown" 
+        [ngClass]="{ 'open': openDropdown === 'resale' }" 
+        (click)="toggleDropdown('resale')"
+      >
+        <a href="#">RESALE PROPERTIES</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Resale</a></li>
+          <li><a href="#">Rental</a></li>
+        </ul>
+      </li>
+
+      <!-- NEW PROJECTS -->
+        <li class="dropdown" [ngClass]="{ 'open': openDropdown === 'projects' }">
+          <!-- only this link toggles the dropdown -->
+          <a href="#" (click)="toggleDropdown('projects'); $event.preventDefault()">
+            NEW PROJECTS
+          </a>
+
+          <!-- child menu no longer triggers parent click -->
+          <ul class="dropdown-menu" (click)="$event.stopPropagation()">
+            <li>
+              <a routerLink="/lodha-lumis" (click)="closeMenu()" routerLinkActive="active">
+                Lodha Lumis
+              </a>
+            </li>
+            <li>
+              <a routerLink="/manhattan" (click)="closeMenu()" routerLinkActive= "active">
+                Manhattan
+              </a>
+            </li>
+            <li>
+              <a routerLink="/runwal" (click)="closeMenu()" routerLinkActive= "active">
+                Runwal
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
+      <li><a href="#">NEWSROOM</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+    </ul>
+  </nav>
+
+  <!-- HAMBURGER (hidden on desktop) -->
+  <div class="nav-hamburger" (click)="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+
+  <router-outlet></router-outlet>
+
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- FOOTER -->
+<footer class="site-footer" id="about">
+  <div class="footer-container">
+    <!-- About Us -->
+    <div class="footer-about">
+      <h2>About Us</h2>
+      <p>
+        At <strong>BestRealEstate</strong>, we are dedicated to helping families
+        and businesses find the perfect property. With years of experience in
+        real estate, our mission is to deliver homes and spaces that inspire
+        comfort, trust, and growth.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Newsroom</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h2>Contact</h2>
+      <!-- <p>Email: info@bestrealestate.com</p>
+      <p>Phone: +91-9876543210</p> -->
+      <p><img src="/images/icons/email.png" alt="">
+        Email: <a href="mailto:bestrealestate114@gmail.com">bestrealestate114@gmail.com</a></p>
+      <p>
+        <img src="/images/icons/whatsapp.png" alt="">
+        Whatsapp: 
+        <a href="https://wa.me/9870104224" target="_blank" rel="noopener noreferrer">
+          +91-9870104224
+        </a>
+      </p>
+      <p>
+        <img src="/images/icons/call.png" alt="">
+        Phone: 
+        <a href="https://wa.me/9870104224" target="_blank" rel="noopener noreferrer">
+          +91-9870104224
+        </a>
+      </p>
+      <p>
+        <img src="/images/icons/instagram.png" alt="">
+        Instagram: 
+        <a href="https://www.instagram.com/bestrealestate_homes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+        target="_blank" rel="noopener noreferrer">
+          bestrealestate_homes
+        </a>
+      </p>
+      <p>Address: Shop No 2, SAPPHIRE CHS, AJMERA I-LAND, near I Max Cenema, Wadala East, Bhakti Park, Chembur, Mumbai, Maharashtra 400037</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ currentYear }} BestRealEstate. All rights reserved.</p>
+  </div>
+</footer>
