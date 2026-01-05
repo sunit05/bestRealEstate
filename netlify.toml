@@ -9,7 +9,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Disable all Netlify plugins (including @netlify/angular-runtime)
-[plugins]
-  disabled = true
