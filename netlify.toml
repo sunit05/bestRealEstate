@@ -3,7 +3,7 @@
   publish = "dist/real-estate-frontend/browser"
 
 [build.environment]
- NODE_VERSION = "20.24.0"
+ NODE_VERSION = "20.14.0"
 
 [[redirects]]
   from = "/*"
