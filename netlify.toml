@@ -3,9 +3,13 @@
   publish = "dist/real-estate-frontend/browser"
 
 [build.environment]
- NODE_VERSION = "20.14.0"
+  NODE_VERSION = "22.12.0"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Disable all Netlify plugins (including @netlify/angular-runtime)
+[plugins]
+  disabled = true
