@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Runwal } from './pages/runwal/runwal';
 import { ProjectDataService } from './project-data.service';
+import { Amaltis } from './pages/amaltis/amaltis';
 
 interface Project {
   name: string;
@@ -44,7 +45,8 @@ interface Project {
   HomeComponent,
   LodhaLumis,
   Manhattan,
-  Runwal
+  Runwal,
+  Amaltis
 ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
@@ -70,6 +72,11 @@ interface Project {
     name: 'Lodha Lumis',
     route: '/lodha-lumis',
     bhk: { 1: true, 2: true, 3: true, 4: false }
+  },
+  {
+    name: 'Amaltis',
+    route: '/amaltis',
+    bhk: { 1: true, 2: true, 3: true, 4: false }
   }
 ];
 
@@ -94,6 +101,7 @@ interface Project {
     { label: 'Lodha Lumis', route: '/lodha-lumis' },
     { label: 'Manhattan', route: '/manhattan' },
     { label: 'Runwal', route: '/runwal' },
+    { label: 'Amaltis', route: '/amaltis' },
     ];
 
   //   onSearchChange() {

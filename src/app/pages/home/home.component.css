@@ -72,7 +72,7 @@ body {
 }
 
 .text-overlay h2 {
-  font-size: 42px;
+  font-size: 27px;
   margin: 0;
   font-weight: bold;
   letter-spacing: 1.2px;
@@ -338,4 +338,123 @@ body {
   .cta-section p { font-size: 14px; }
 
   .cta-section .btn-primary { padding: 10px 25px; }
+}
+
+
+/* ================== */
+
+/* Shared Section Styles */
+.why-choose-us,
+.our-process {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* .why-choose-us h2,
+.our-process h2 {
+  font-size: 26px;
+  margin-bottom: 50px;
+  color: #222;
+} */
+
+/* WHY CHOOSE US */
+.why-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  background: #fff;
+  padding: 30px 25px;
+  width: 300px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+}
+
+.why-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* OUR PROCESS */
+.our-process {
+  background: #ffffff;
+}
+
+.process-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.process-card {
+  background: #f5f5f5;
+  padding: 35px 25px;
+  width: 280px;
+  border-radius: 14px;
+  position: relative;
+}
+
+.process-card span {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 700;
+  color: #c49b63;
+  margin-bottom: 10px;
+}
+
+.process-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.process-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-card,
+  .process-card {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1E2A38;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* Optional underline accent */
+section h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #6BBE92;
+  margin: 12px auto 0;
+  border-radius: 2px;
 }

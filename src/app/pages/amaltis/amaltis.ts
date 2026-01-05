@@ -4,13 +4,13 @@ import { RouterModule } from '@angular/router';
 import panzoom from 'panzoom';
 
 @Component({
-  selector: 'app-lodha-lumis',
+  selector: 'app-amaltis',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './lodha-lumis.html',   // ✅ matches your HTML file
-  styleUrls: ['./lodha-lumis.css']     // ✅ matches your CSS file
+  templateUrl: './amaltis.html',
+  styleUrl: './amaltis.css'
 })
-export class LodhaLumis implements OnInit, OnDestroy {
+export class Amaltis implements OnInit, OnDestroy  {
 
   @ViewChildren('zoomArea') zoomAreas!: QueryList<ElementRef>;
   
@@ -26,11 +26,13 @@ export class LodhaLumis implements OnInit, OnDestroy {
   }
 
   slides = [
-    { image: '/images/lodha_lumis/Screenshot_1.jpeg', title: 'Lodha Lumis', subtitle: 'Luxury Redefined' },
-    { image: '/images/lodha_lumis/Screenshot_2.jpeg', title: 'Modern Living', subtitle: 'Comfort Meets Elegance' },
-    { image: '/images/lodha_lumis/Screenshot_3.jpeg', title: 'Prime Location', subtitle: 'City Convenience' },
-    { image: '/images/lodha_lumis/Screenshot_4.jpeg', title: 'Lodha Lumis', subtitle: 'Luxury Redefined' },
-    { image: '/images/lodha_lumis/Screenshot_5.jpeg', title: 'Modern Living', subtitle: 'Comfort Meets Elegance' },
+    { image: '/images/amaltis/Raheja Amaltis - Brochure_page-0001.jpg', title: 'Raheja Amaltis', subtitle: 'Luxury Redefined' },
+    { image: '/images/amaltis/Raheja Amaltis - Brochure_page-0002.jpg', title: 'Raheja Amaltis', subtitle: 'Luxury Redefined' },
+    { image: '/images/amaltis/Raheja Amaltis - Brochure_page-0003.jpg', title: 'Raheja Amaltis', subtitle: 'Luxury Redefined' },
+    { image: '/images/amaltis/Raheja Amaltis - Brochure_page-0004.jpg', title: 'Raheja Amaltis', subtitle: 'Luxury Redefined' },
+    { image: '/images/amaltis/Raheja Amaltis - Brochure_page-0006.jpg', title: 'Raheja Amaltis', subtitle: 'Luxury Redefined' },
+    { image: '/images/amaltis/Raheja Amaltis - Brochure_page-0012.jpg', title: 'Raheja Amaltis', subtitle: 'Luxury Redefined' },
+    
   ];
   currentSlide = 0;
   private intervalId: any;
@@ -65,23 +67,32 @@ export class LodhaLumis implements OnInit, OnDestroy {
   // ];
 
   amenities = [
-    { name: 'Gym', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity1.jpg' },
-    { name: 'Swimming Pool', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity2.jpg' },
-    { name: 'Clubhouse', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity3.jpg' },
-    { name: '24/7 Security', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity4.jpg' },
-    { name: 'Children\'s Play Area', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity5.jpg' },
-    { name: 'Gym', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity6.jpg' },
-    { name: 'Swimming Pool', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity7.jpg' },
-    { name: 'Clubhouse', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity8.jpg' },
-    { name: '24/7 Security', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity9.jpg' },
-    { name: 'Children\'s Play Area', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity10.jpg' },
-    { name: 'Children\'s Play Area', icon: '/images/lodha_lumis/lodha-lumis-amenities/Lodha_lumis-amenity11.jpg' }
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja-Amaltis-3.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 8.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 9.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 14.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 15.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 16.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 18.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 19.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 27.jpg' },
+    { name: 'Gym', icon: '/images/amaltis/amenities/Raheja Amaltis 29.jpg' },
   ];
 
   // Testimonials
   clients = [
-    { name: 'Rahul Sharma', feedback: 'The experience was seamless and professional.' },
-    { name: 'Anita Deshmukh', feedback: 'I found my dream home at Lodha Lumis!' }
+   {
+    name: 'Amit Kulkarni',
+    feedback: 'The project planning and proposed amenities at Raheja Amaltis look very promising. The brand reputation adds a lot of confidence.'
+  },
+  {
+    name: 'Neha Joshi',
+    feedback: 'We liked the layout plans and overall vision of the project. It seems thoughtfully designed for modern family living.'
+  },
+  {
+    name: 'Sanjay Mehta',
+    feedback: 'The location and master plan make Raheja Amaltis an attractive option for long-term investment.'
+  }
   ];
 
   // Call to Action
@@ -140,3 +151,4 @@ export class LodhaLumis implements OnInit, OnDestroy {
 }
 
 }
+

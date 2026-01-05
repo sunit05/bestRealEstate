@@ -53,9 +53,15 @@ export class Manhattan implements OnInit, OnDestroy {
   
   // Projects
   projects = [
-    { name: '2 BHK Apartment', location: 'Mumbai', price: 85000009, image: '/images/lodha_lumis.jpeg' },
-    { name: '3 BHK Apartment', location: 'Mumbai', price: 125000009, image: '/images/image2.jpeg' },
-    { name: 'Penthouse', location: 'Mumbai', price: 250000000, image: '/images/image3.jpeg' }
+{ name: '2 BHK Apartment', location: 'Mumbai', price: 85000009, image: '/images/lodha_lumis.jpeg' ,
+      description:'Perfectly designed 2 BHK homes offering a comfortable living space with modern interiors, ideal for small families and working professionals.'
+    },
+    { name: '3 BHK Apartment', location: 'Mumbai', price: 125000009, image: '/images/image2.jpeg',
+      description:'Spacious 3 BHK residences with smart layouts, premium finishes, and ample natural light, crafted for growing families seeking elegance and comfort.'
+     },
+    { name: '4 BHK Apartment', location: 'Mumbai', price: 250000000, image: '/images/image3.jpeg',
+      description:'Luxurious 4 BHK homes featuring expansive living areas, premium amenities, and refined architecture for those who desire upscale living.'
+     }
   ];
 
   // Amenities
@@ -79,8 +85,18 @@ export class Manhattan implements OnInit, OnDestroy {
 
   // Testimonials
   clients = [
-    { name: 'Rahul Sharma', feedback: 'The experience was seamless and professional.' },
-    { name: 'Anita Deshmukh', feedback: 'I found my dream home at Lodha Lumis!' }
+     {
+    name: 'Rohit Verma',
+    feedback: 'Ajmera Manhattan stands out with its concept and connectivity. The project details shared so far are impressive.'
+  },
+  {
+    name: 'Priya Shah',
+    feedback: 'The proposed amenities and apartment layouts look well planned. It feels like a good urban lifestyle offering.'
+  },
+  {
+    name: 'Kunal Patel',
+    feedback: 'Considering the location and developer credibility, Ajmera Manhattan appears to be a solid choice.'
+  }
   ];
 
   // Call to Action

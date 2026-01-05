@@ -1,11 +1,13 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { RouterModule  } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -28,7 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     route: '/lodha-lumis'
   },
   {
-    image: '/images/manhattan/manhattan_home.jpg',
+    image: '/images/manhattan/manhattan_home_screenshot.png',
     title: 'Manhattan',
     subtitle: 'Driven to bring you serenity.',
     route: '/manhattan'

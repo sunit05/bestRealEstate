@@ -3,9 +3,9 @@
 
 <!-- PROJECT HIGHLIGHTS -->
 <section class="projects">
-  <h2>Featured Runwal Project</h2>
+  <h2>Featured Runwal Woods Project</h2>
   <p class="intro-text">
-    Discover a collection of exquisite residences at Runwal, each designed to harmonize luxury, comfort, and modern living. Explore our apartments, penthouses, and villas with breathtaking interiors and world-class amenities.
+    Discover a collection of exquisite residences at Runwal Woods, each designed to harmonize luxury, comfort, and modern living. Explore our apartments, penthouses, and villas with breathtaking interiors and world-class amenities.
   </p>
   <!-- FEATURED CARDS -->
 <!-- <div class="hero-cards">
@@ -39,9 +39,9 @@
       <!-- <img [src]="project.image" alt="{{project.name}}"> -->
       <div class="project-info">
         <h3>{{project.name}}</h3>
-        <p><strong>Location:</strong> {{project.location}}</p>
-        <p><strong>Price:</strong> ₹ {{project.price | number}}</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in mauris et ligula suscipit sagittis.</p>
+        <!-- <p><strong>Location:</strong> {{project.location}}</p>
+        <p><strong>Price:</strong> ₹ {{project.price | number}}</p> -->
+        <p>{{project.description}}</p>
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@
 
 <div class="amenities-vertical">
   <div class="amenity-card" *ngFor="let amenity of amenities">
-    <div class="zoom-container" #zoomArea>
+    <div class="zoom-container" >
       <img class="amenity-img"
            [src]="amenity.icon"
            alt="{{amenity.name}}"
